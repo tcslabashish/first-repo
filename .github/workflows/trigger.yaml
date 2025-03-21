@@ -1,4 +1,4 @@
-name: Hello world pipeline
+name: From trigger
 on:
   workflow_dispatch:
 jobs:
