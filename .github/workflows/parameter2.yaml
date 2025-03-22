@@ -8,16 +8,21 @@ jobs:
     name: Build
     runs-on: ubuntu-22.04
     steps:
-      - run: |
-          echo "checkout"
-          echo "setting up java version $java_version"
-          echo "building java test"
+      - name: code checkout
+        uses: actions/checkout@v4
+      - name: setting java version
+        run: echo "setting up java version $java_version"
+      - name: building java test
+        run: echo "building java test"
+  
   Deployment:
     name: Depl
     runs-on: ubuntu-22.04
     env:
       appl: "Ashish"
     steps:
-      - run: |
-          echo "checkout"
-          echo "building docker application $appl-app"
+      - name: code checkout
+        uses: actions/checkout@v4
+      - name: building docker application
+        run: echo "building docker application $appl-app"
+          
