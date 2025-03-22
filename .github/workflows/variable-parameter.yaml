@@ -1,19 +1,33 @@
 name: variable and parameter
 on:
   workflow_dispatch:
+    inputs:
+      training:
+        default: "github"
+        description: select the training name
+        type: choice
+        options:
+          - github
+          - bitbucket
+          - gitlab
 env:
-  NAME: "Ashish"
-  Training: "github"
+  TRAINING: ${{ inputs.training }}  # global variable available to all jobs
 jobs:
-  Hello:
-    name: Hello
-    runs-on: ubuntu-22.04
+  hello:
+    name: greeting   
+    runs-on: ubuntu-latest 
+    env:
+      NAME: "Manu"  # local variable available to this job only 
     steps:
-      - name: say hello to all
-        run: echo "Hello $NAME! This is my $TRAINING"
-  Greet:
-    name: greeting
-    runs-on: ubuntu-22.04
+      - name: check out the code
+        uses: actions/checkout@v4
+      - name: Greet a user
+        run: echo "Hello $NAME! this is my $TRAINING training"
+  greeting:
+    name: greeting hello  
+    env: 
+      NAME: "KRISHNA"  # local variable available to this job only 
+    runs-on: ubuntu-latest 
     steps:
-      - name: say hello to all
-        run: echo "Hello $NAME !"
+      - name: Greet a user
+        run: echo "Hello $NAME! this is my $TRAINING training" 
