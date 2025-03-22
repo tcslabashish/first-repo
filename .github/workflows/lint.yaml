@@ -1,6 +1,10 @@
 name: Lint check
 on:
   workflow_dispatch:
+  pull_request:
+    types:
+      - opened
+      - reopened
 jobs:
   Lint_Job:
     name: Lint_Name
@@ -9,4 +13,4 @@ jobs:
       - name: code checkout
         uses: actions/checkout@v4
       - name: Message
-        run: echo "Echo Message"
+        run: echo "Lint Message"
