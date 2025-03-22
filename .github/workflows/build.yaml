@@ -1,0 +1,13 @@
+name: Build
+on:
+  workflow_dispatch:
+  pull_request:
+    types:
+      - closed
+jobs:
+  Build_Job:
+    name: Build_Name
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Build step
+        run: echo "Build done"
