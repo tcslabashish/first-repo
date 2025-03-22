@@ -1,0 +1,23 @@
+name: Parameter Workflow Java Eg
+on:
+  workflow_dispatch:
+env:
+  java_version: "17"
+jobs:
+  Build:
+    name: Build
+    runs-on: ubuntu-22.04
+    steps:
+      - run: |
+          echo "checkout"
+          echo "setting up java version $java_version"
+          echo "building java test"
+  Deployment:
+    name: Depl
+    runs-on: ubuntu-22.04
+    env:
+      appl: "Ashish"
+    steps:
+      - run: |
+          echo "checkout"
+          echo "building docker application $appl-app"
