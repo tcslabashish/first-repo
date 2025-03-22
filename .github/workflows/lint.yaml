@@ -1,0 +1,12 @@
+name: Lint check
+on:
+  workflow_dispatch:
+jobs:
+  Lint_Job:
+    name: Lint_Name
+    runs-on: ubuntu-22.04
+    steps:
+      - name: code checkout
+        uses: actions/checkout@v4
+      - name: Message
+        run: echo "Echo Message"
