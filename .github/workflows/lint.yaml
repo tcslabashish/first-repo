@@ -9,4 +9,4 @@ jobs:
       - name: code checkout
         uses: actions/checkout@v4
       - name: Message
-        run: echo "Echo Message"
+        run: echo "Lint Message"
