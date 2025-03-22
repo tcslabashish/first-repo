@@ -1,0 +1,19 @@
+name: variable and parameter
+on:
+  workflow_dispatch:
+env:
+  NAME: "Ashish"
+  Training: "github"
+jobs:
+  Hello:
+    name: Hello
+    runs-on: ubuntu-22.04
+    steps:
+      - name: say hello to all
+        run: echo "Hello $NAME! This is my $TRAINING"
+  Greet:
+    name: greeting
+    runs-on: ubuntu-22.04
+    steps:
+      - name: say hello to all
+        run: echo "Hello $NAME !"
