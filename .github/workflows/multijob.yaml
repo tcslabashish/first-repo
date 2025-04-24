@@ -7,6 +7,10 @@ jobs:
     steps:
       - name: checkout code
         run: echo "checking out code"
+      - name: test sleep
+        run: | 
+          echo "sleeping build" 
+          sleep 5
   test:
     name: building1
     needs: [ build ]
@@ -14,6 +18,10 @@ jobs:
     steps:
       - name: checkout code
         run: echo "checking out code"
+      - name: test sleep
+        run: | 
+          echo "sleeping test" 
+          sleep 5
   testdeploy:
     name: building2
     needs: [ test ]
@@ -21,6 +29,10 @@ jobs:
     steps:
       - name: checkout code
         run: echo "checking out code"
+      - name: test sleep
+        run: | 
+          echo "sleeping test deploy" 
+          sleep 5
   devdeploy:
     name: building3
     needs: [ test ]
