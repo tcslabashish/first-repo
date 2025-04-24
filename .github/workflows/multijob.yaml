@@ -29,10 +29,6 @@ jobs:
     steps:
       - name: checkout code
         run: echo "checking out code"
-      - name: test sleep
-        run: | 
-          echo "sleeping test deploy" 
-          sleep 5
   devdeploy:
     name: building3
     needs: [ test ]
