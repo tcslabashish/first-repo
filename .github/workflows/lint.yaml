@@ -10,7 +10,7 @@ jobs:
     name: Lint_Name_test
     runs-on: ubuntu-22.04
     steps:
-      - name: code checkout
+      - name: code checkout 1
         uses: actions/checkout@v4
       - name: Message
         run: echo "Lint Message"
