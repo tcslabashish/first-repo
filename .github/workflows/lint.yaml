@@ -7,7 +7,7 @@ on:
       - reopened
 jobs:
   Lint_Job:
-    name: Lint_Name
+    name: Lint_Name_test
     runs-on: ubuntu-22.04
     steps:
       - name: code checkout
