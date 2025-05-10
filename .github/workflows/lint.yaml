@@ -22,3 +22,11 @@ jobs:
         uses: actions/checkout@v4
       - name: Message
         run: echo "Lint Message"
+  Lint_Job_test:
+    name: Lint_Name_Test
+    runs-on: ubuntu-22.04
+    steps:
+      - name: code checkout
+        uses: actions/checkout@v4
+      - name: Message
+        run: echo "Lint Message"
